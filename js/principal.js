@@ -1,4 +1,3 @@
-
 const perguntasDatabase = [
     { // pergunta 1
         'pergunta' : 'O coronavírus é transmitido pelo ar ?',
