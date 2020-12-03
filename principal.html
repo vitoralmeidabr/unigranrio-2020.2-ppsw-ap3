@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <title>Exercício #1</title>
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <script src="js/prism.js" type="text/javascript"></script>
+
+</head>
+
+<body id="page-home">
+
+<!-- Navegacao -->
+<nav class="navbar" id="menu">
+    <ul id="perguntas-indice" class="d-flexbox">
+        <li><a href="#">#1</a></li>
+        <li><a href="#">#2</a></li>
+        <li><a href="#">#3</a></li>
+        <li><a href="#">#4</a></li>
+        <li><a href="#">#5</a></li>
+        <li><a href="#">#6</a></li>
+        <li><a href="#">#7</a></li>
+        <li><a href="#">#8</a></li>
+        <li><a href="#">#9</a></li>
+        <li><a href="#">#10</a></li>
+        <li><a href="#">Resultado</a></li>
+    </ul>
+</nav>
+
+<!-- Conteúdo -->
+<div class="conteudo d-flexbox line-numbers">
+    <div class="pergunta cta d-flexbox">
+        <br><br><br><br><br>
+        <h1>Vitor J F de Almeida - <small>5405395</small></h1>
+        <h2>AP3 - Práticas de Programação em Sistemas Web</h2>
+        <br><br><br>
+    </div>
+    
+    <section id="introducao">
+        <div class="pergunta cta d-flexbox">
+            <h1>Quizz</h1>
+            <h2>Responda a 10 perguntas sobre a COVID-19 e descubra se você esta pronto para cuidar da sua saúde !</h2>
+
+            <a class="iniciar-jogo" href="#perguntas">Começar !</a>
+        </div>
+    </section>
+
+    <section id="resultado-geral">
+        <div class="pergunta cta d-flexbox">
+            <h1>Resultado Geral</h1>
+            <h2 id="resultado-pontuacao">Carregando pontuação ...</h2>
+
+            <a class="iniciar-jogo" href="#perguntas">Jogar de novo !</a>
+        </div>
+    </section>
+    
+    <section id="perguntas">
+        <div class="pergunta cta d-flexbox">
+            <h1 id="pergunta-indice">Pergunta -/-</h1>
+            <h2 id="pergunta-texto">Carregando pergunta ...</h2>
+
+            <article>
+                <ol id="pergunta-respostas" class="d-flexbox">
+                    <li>Carregando respostas ...</li>
+                    <li class="correta">
+                        <label>
+                            <input type="radio" name="respostas" value="1">
+                            Resposta certa ...
+                        </label>
+                    </li>
+                    <li class="errada">
+                        <label>
+                            <input type="radio" name="respostas" value="1">
+                            Resposta errada ...
+                        </label>
+                    </li>
+                </ol>
+
+                <div id="p-resultado" class="p-resultado"></div>
+
+                <button class="p-action" id="p-responder">Responder</button>
+                <button class="p-action" id="p-avancar">Próxima</button>
+            </article>
+        </div>
+    </section>
+
+</div>
+<!-- /.container -->
+
+
+<script src="js/principal.js" type="text/javascript"></script>
+</body>
+
+</html>

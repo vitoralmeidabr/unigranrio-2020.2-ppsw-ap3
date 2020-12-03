@@ -1,0 +1,276 @@
+/** Reset basico de css para remover diferenças entre navegadores
+* http://meyerweb.com/eric/tools/css/reset/
+*   v2.0 | 20110126
+*  License: none (public domain)
+**/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: 'Roboto', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-spacing: 0px;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 800px;
+	margin: 1.5rem auto;
+	background-color: transparent;
+	text-align: center;
+}
+
+th {
+	font-weight: bold;
+	border: 1px solid #FFF; /* Change the border-color of heading here */
+	padding: 8px;
+	background-color: #FFF;
+	color: #000;
+	vertical-align: middle;
+}
+
+td {
+	border: 1px solid #FFF; /* Change the border-color of cells here */
+	padding: 8px;
+}
+
+
+/** Flexbox para compatibilidade com browsers modernos
+* Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins
+**/
+.d-flexbox {
+	position: relative;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+html {
+	height: 100%;
+    overflow: auto;
+}
+
+body {
+	background-size: cover;
+	background: #FAEBD7 url(../background.jpg) no-repeat fixed top center;
+	font-size: 16px;
+	padding-bottom: calc(64px);
+}
+
+div { position: relative; display: block; }
+strong { font-weight: 700; }
+button, label { cursor: pointer; }
+
+nav.navbar {
+	width: 100%;
+	height: 64px;
+	display: block;
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+}
+nav.navbar ul.d-flexbox {
+	justify-content: center;
+	background-color: #FAEBD7;
+}
+nav ul li {
+	padding: 20px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+	nav ul li {
+		padding: 20px 10px;
+		font-size: 1rem;
+	}
+}
+nav ul li a {  color: #D34E24;  text-decoration: none; line-height: 1.5;}
+nav ul li a:hover, nav ul li.active a {  color: #050517;  text-decoration: none;}
+nav ul li a.menu-me { font-size: 1.5rem; line-height: 1; }
+
+.conteudo {
+    height: calc(100% - 64px);
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: unset;
+}
+
+.conteudo section {
+	width: 75%;
+	padding: calc(64px + 3rem) 0 0;
+	min-height: calc( 100vh - 64px - 6rem);
+	display: none;
+}
+
+.conteudo section:first-of-type {
+	padding: 64px 1rem 3rem;
+}
+
+.conteudo section#introducao {
+	display: block;
+	min-height: unset;
+}
+
+.conteudo .pergunta {
+    flex-direction: column;
+    justify-content: flex-start;
+	text-align: center;
+	color: #000;
+	margin: auto;
+	background-color: rgba(255,255,255, 0.7);
+	padding: 20px;
+}
+
+.conteudo .pergunta h1 {
+	font-size: 2rem;
+	line-height: 1.5;
+	color: #6e1616;
+	margin-bottom: 1.5rem;
+}
+.conteudo .pergunta h2 {
+	font-size: 1.5rem;
+	line-height: 1.25;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.conteudo .pergunta a, .conteudo .pergunta .p-action {
+	background-color: #d44e24;
+	color: #FFF;
+	font-weight: 700;
+	border-radius: 30px;
+	min-width: 160px;
+	max-width: 160px;
+	padding: 10px 0;
+	text-align: center;
+	text-decoration: none;
+	margin: 3rem auto;
+	outline: none;
+	box-shadow: unset;
+	border: 0;
+}
+.conteudo .pergunta a:hover {
+	text-decoration: none;
+}
+
+.conteudo .pergunta article {
+	text-align: left;
+	max-width: 800px;
+	width: 100%;
+	margin: 1.5rem auto;
+}
+
+.conteudo .pergunta input, .conteudo .pergunta select {
+	line-height: 1.5;
+	font-size: 1.25rem;
+}
+
+.conteudo .pergunta .p-action {
+	display: block;
+}
+
+.conteudo .pergunta .p-resultado {
+	display: none;
+	border: 2px solid #FFF;
+	margin: 1.5rem auto;
+	padding: 1.5rem;
+	line-height: 1.25;
+
+}
+.conteudo .pergunta div.code-toolbar  {
+
+	padding-top: 2.5rem;
+}
+
+.conteudo .pergunta div.code-toolbar > .toolbar,
+.conteudo .pergunta div.code-toolbar:hover > .toolbar {
+	opacity: 1;
+	font-size: 1.25rem;
+	right: unset;
+	left: 1rem;
+	top: 1rem;
+}
+
+.conteudo .pergunta ol {
+	justify-content: space-between;
+	margin: 1.5rem auto 0;
+}
+.conteudo .pergunta ol li {
+	line-height: 1.25;
+	background-color: #FFEAD0;
+	border: 1px solid #FFF;
+	width: 100%;
+	padding: 10px;
+	margin: .5rem 0;
+}
+
+.conteudo .pergunta ol li.errada { background-color: #F76F8E; }
+.conteudo .pergunta ol li.correta { background-color: #7FB069; }
+
+.conteudo .pergunta table {
+	width: 300px;
+	margin: 1.5rem auto;
+	border: 1px solid #FFF;
+	border-collapse: separate;
+}
+
+.conteudo .pergunta ol li label {
+	display: block;
+	width:  100%;
+}
+
+.conteudo .pergunta ol li input {
+	margin-right: 10px;
+}
